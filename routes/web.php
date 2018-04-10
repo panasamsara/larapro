@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/index', 'ArticleController@index');
