@@ -1,6 +1,8 @@
 <template>
-  
-    <el-header>Header</el-header>
+  <div class="header-box">
+      <el-header>Header</el-header>
+  </div>
+    
     
 </template>
 
@@ -13,5 +15,9 @@ export default {
 }
 </script>
 <style>
-
+.header-box{
+    width: 1200px;
+    margin: auto;
+    background-color:khaki;
+}
 </style>
