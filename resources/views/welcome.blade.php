@@ -27,7 +27,7 @@
             <div class="content">
 
                 <div id='app'>
-                    <my-index></my-index>
+                    <app></app>
                 </div>
 
             </div>

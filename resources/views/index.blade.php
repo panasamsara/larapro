@@ -40,14 +40,14 @@
                 </div>
             @endif
             <div class="content">
-                
-                <div id='app'> 
-                    <my-index></my-index>
+
+                <div id='app'>
+                    <!-- <my-header></my-header> -->
                 </div>
-                
+
             </div>
         </div>
     </body>
-            
+
     <script src="/js/app.js"></script>
 </html>
