@@ -1,9 +1,13 @@
 <template>
   <div class="header-box">
-      <el-header>Header</el-header>
+      <div>
+         <router-link to="/">header</router-link>
+         <router-link to="/content">content</router-link>
+      </div>
+      <router-view></router-view>
   </div>
-    
-    
+
+
 </template>
 
 <script>

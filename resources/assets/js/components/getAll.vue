@@ -11,7 +11,7 @@ export default {
         return {msg:'2'}
     },
     // components: {
-        
+
     // },
     mounted() {
         this.getAll()
@@ -22,7 +22,10 @@ export default {
                 method: 'get',
                 url: 'article',
             }).then((response) => {
-             this.msg = response.data.data[0].content;
+              if(response.data.data[0]){
+                this.msg = response.data.data[0].content;
+              }
+
             })
         }
     }

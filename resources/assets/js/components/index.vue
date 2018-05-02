@@ -6,19 +6,19 @@
   </el-container>
 </template>
 <script>
-import myHeader from './myheader' 
+import myHeader from './myheader'
 import getAll from './getAll'
 
 export default {
     name: 'myIndex',
     data() {
-        return {msg:'1111'}
+        return {msg:'index页面'}
     },
     components: {
         myHeader,
         getAll
     },
-    
+
 }
 </script>
 <style>
