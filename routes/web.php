@@ -19,4 +19,3 @@ Route::get('/', function () {
 // Route::get('/index', 'ArticleController@index');
 
 Route::resource('article', 'ArticleController');
-

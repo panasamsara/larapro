@@ -1,10 +1,10 @@
 <template>
     <div>
         <h1>home</h1>
-        <div v-for="article in articles.data">
-            <h5>{{article.title}}</h5>
-          <div>{{article.content}}</div>
-        </div>
+
+        <h5>{{article.data.title}}</h5>
+        <div>{{article.data.content}}</div>
+
     </div>
 </template>
 
@@ -12,20 +12,22 @@
     export default {
         data () {
             return {
-                articles: ""
+                article: ""
             }
         },
         mounted() {
-            this.getAll()
+            this.getArticle()
         },
         methods: {
-            getAll () {
+            getArticle () {
                 this.$ajax({
                     method: 'get',
-                    url: 'article',
+                    url: 'article/',
+                    data: {
+                      id: ''
+                    }
                 }).then((response) => {
-                    this.articles = response.data;
-                    console.log(32132132)
+                    this.article = response.data;
                 })
             }
         }

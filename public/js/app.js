@@ -92954,12 +92954,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            msg: "我是home 组件"
+            articles: ""
         };
+    },
+    mounted: function mounted() {
+        this.getAll();
+    },
+
+    methods: {
+        getAll: function getAll() {
+            var _this = this;
+
+            this.$ajax({
+                method: 'get',
+                url: 'article'
+            }).then(function (response) {
+                _this.articles = response.data;
+                console.log(32132132);
+            });
+        }
     }
 });
 
@@ -92971,11 +92991,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("home")]),
-    _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.msg))])
-  ])
+  return _c(
+    "div",
+    [
+      _c("h1", [_vm._v("home")]),
+      _vm._v(" "),
+      _vm._l(_vm.articles.data, function(article) {
+        return _c("div", [
+          _c("h5", [_vm._v(_vm._s(article.title))]),
+          _vm._v(" "),
+          _c("div", [_vm._v(_vm._s(article.content))])
+        ])
+      })
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
