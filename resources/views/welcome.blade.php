@@ -20,6 +20,10 @@
                 height: 100vh;
                 margin: 0;
             }
+            .content{
+              width: 1000px;
+              margin: auto;
+            }
         </style>
     </head>
     <body>
