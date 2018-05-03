@@ -90252,8 +90252,16 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 var routes = [{
     path: "/home",
     component: __WEBPACK_IMPORTED_MODULE_2__components_home___default.a
+    // children: [
+    //     {
+    //         path: '/article/:id',
+    //         name: 'article',
+    //         component: article
+    //     }
+    // ]
 }, {
     path: "/article/:id",
+    name: 'article',
     component: __WEBPACK_IMPORTED_MODULE_4__components_article___default.a
 }, {
     path: "/about",
@@ -92963,6 +92971,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -92999,14 +93010,24 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("h1", [_vm._v("home")]),
+      _c("h1", [_vm._v("home页面")]),
       _vm._v(" "),
       _vm._l(_vm.articles.data, function(article) {
-        return _c("div", [
-          _c("h5", [_vm._v(_vm._s(article.title))]),
-          _vm._v(" "),
-          _c("div", [_vm._v(_vm._s(article.content))])
-        ])
+        return _c(
+          "div",
+          [
+            _c(
+              "router-link",
+              {
+                attrs: { to: { name: "article", params: { id: article.id } } }
+              },
+              [_c("h5", [_vm._v(_vm._s(article.title))])]
+            ),
+            _vm._v(" "),
+            _c("div", [_vm._v(_vm._s(article.content))])
+          ],
+          1
+        )
       })
     ],
     2

@@ -12,10 +12,18 @@ Vue.use(VueRouter);
 const routes = [
     {
         path:"/home",
-        component: home
+        component: home,
+        // children: [
+        //     {
+        //         path: '/article/:id',
+        //         name: 'article',
+        //         component: article
+        //     }
+        // ]
     },
     {
         path:"/article/:id",
+        name: 'article',
         component: article
     },
     {

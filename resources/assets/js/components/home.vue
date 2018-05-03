@@ -1,9 +1,12 @@
 <template>
     <div>
-        <h1>home</h1>
+        <h1>home页面</h1>
         <div v-for="article in articles.data">
-            <h5>{{article.title}}</h5>
-          <div>{{article.content}}</div>
+            <router-link :to="{ name: 'article', params: { id: article.id }}">
+                <h5>{{article.title}}</h5>
+            </router-link>
+                
+            <div>{{article.content}}</div>
         </div>
     </div>
 </template>
