@@ -37,6 +37,18 @@ class ArticleController extends Controller
     }
 
 
+      /**
+     * Show the one resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $article = Article::findOrFail($id);
+        return Api::result($article);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

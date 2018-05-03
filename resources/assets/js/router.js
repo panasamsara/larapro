@@ -2,8 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 // 引入组件
-import home from "./components/home.vue";
-import about from "./components/about.vue";
+import home from "./components/home";
+import about from "./components/about";
+import article from "./components/article";
 
 // 要告诉 vue 使用 vueRouter
 Vue.use(VueRouter);
@@ -12,6 +13,10 @@ const routes = [
     {
         path:"/home",
         component: home
+    },
+    {
+        path:"/article/:id",
+        component: article
     },
     {
         path: "/about",

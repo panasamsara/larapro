@@ -25,7 +25,7 @@
                     url: 'article',
                 }).then((response) => {
                     this.articles = response.data;
-                    console.log(32132132)
+                    
                 })
             }
         }

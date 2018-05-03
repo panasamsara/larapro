@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h1>home</h1>
+        <h1>article</h1>
 
-        <h5>{{article.data.title}}</h5>
-        <div>{{article.data.content}}</div>
+       <h5>{{article.data.title}}</h5> 
+       <div>{{article.data.content}}</div> 
 
     </div>
 </template>
@@ -12,7 +12,9 @@
     export default {
         data () {
             return {
-                article: ""
+                article: {
+                    data: {}
+                }
             }
         },
         mounted() {
@@ -22,9 +24,9 @@
             getArticle () {
                 this.$ajax({
                     method: 'get',
-                    url: 'article/',
+                    url: 'article/1',
                     data: {
-                      id: ''
+                    //   id: ''
                     }
                 }).then((response) => {
                     this.article = response.data;
