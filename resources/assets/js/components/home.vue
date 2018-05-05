@@ -5,9 +5,12 @@
             <router-link :to="{ name: 'article', params: { id: article.id }}">
                 <h5>{{article.title}}</h5>
             </router-link>
-                
+
             <div>{{article.content}}</div>
         </div>
+        <router-link :to="{ name: 'create'}">
+            <h5>发布文章</h5>
+        </router-link>
     </div>
 </template>
 
@@ -28,7 +31,7 @@
                     url: 'article',
                 }).then((response) => {
                     this.articles = response.data;
-                    
+
                 })
             }
         }

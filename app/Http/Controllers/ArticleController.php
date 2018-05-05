@@ -32,8 +32,11 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $res = Article::create($request->all());
-        return $res;
+        $article = Article::create($request->all());
+       if ($article) {
+           return Api::result(null, "添加任务保存成功.");
+       }
+       return Api::result(null, "添加任务保存失败.");
     }
 
 
@@ -82,9 +85,8 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        return Article::findOrFail($id)->delete();
-
+      Article::destroy($id);
+      return Api::result(null, '删除任务成功.');
     }
 
 }
-

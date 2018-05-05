@@ -5,6 +5,7 @@ import VueRouter from "vue-router";
 import home from "./components/home";
 import about from "./components/about";
 import article from "./components/article";
+import createArticle from "./components/createArticle"
 
 // 要告诉 vue 使用 vueRouter
 Vue.use(VueRouter);
@@ -25,6 +26,11 @@ const routes = [
         path:"/article/:id",
         name: 'article',
         component: article
+    },
+    {
+        path:"/create",
+        name: 'create',
+        component: createArticle
     },
     {
         path: "/about",
