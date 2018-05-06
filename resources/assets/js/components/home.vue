@@ -1,6 +1,12 @@
 <template>
     <div>
-        <h1>home页面</h1>
+        <div class="content-top">
+            <!-- <div>home页面</div> -->
+            <router-link :to="{ name: 'create'}" class="create-art">
+                <h5>发布文章</h5>
+            </router-link>
+        </div>
+        
         <div v-for="article in articles.data">
             <router-link :to="{ name: 'article', params: { id: article.id }}">
                 <h5>{{article.title}}</h5>
@@ -8,9 +14,7 @@
 
             <div>{{article.content}}</div>
         </div>
-        <router-link :to="{ name: 'create'}">
-            <h5>发布文章</h5>
-        </router-link>
+        
     </div>
 </template>
 
@@ -37,3 +41,17 @@
         }
     }
 </script>
+<style>
+.create-art{
+    width: 80px;
+    height: 36px;
+    border-radius: 3px;
+    background-color: #636b6f;
+    color: #fff !important;
+    display: inline-block;
+    text-align: center;
+}
+.content-top{
+    margin: 10px;
+}
+</style>

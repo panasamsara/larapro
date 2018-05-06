@@ -4,6 +4,7 @@
 
        <h5>{{article.data.title}}</h5>
        <div>{{article.data.content}}</div>
+       <button type="button" class="btn btn-default" name="button" @click='$router.history.go(-1)'>返回</button>
        <button type="button" class="btn btn-danger" name="button" @click='deleteArticle(article.data.id)'>删除</button>
     </div>
 </template>

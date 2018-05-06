@@ -22,10 +22,11 @@ export default {
 
 <style>
 header{
-  background-color: #9edddd;
+  background-color: #dedede;
+  border-bottom: 1px solid #fff;
 }
 a{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .nav-box{
   display: inline-block;
@@ -39,9 +40,12 @@ a{
   vertical-align: middle;
   text-align: center;
   line-height: 60px;
-  color: #000;
+  color: #636b6f;
 }
+/* .nav-box a:active, .nav-box a:visited, .nav-box a:hover{
+  text-decoration:none;
+} */
 .router-link-active{
-  border-bottom: 2px solid #000; 
+  border-bottom: 2px solid #fff; 
 }
 </style>
