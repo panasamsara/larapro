@@ -89,4 +89,24 @@ class ArticleController extends Controller
       return Api::result(null, '删除任务成功.');
     }
 
+  /*
+     阅读量  地点文章一次增加一个阅读量
+     @param  number  num  阅读量
+  */
+   public function addNum(Request $request, $id){
+
+        $this->validate($require, [
+                $this->validate($request,[
+                        'num' => 'number',
+                    ]);
+           ]);
+
+         $num = $request->num + 1;
+         $ar = Article::where('id',$id)->update(['num'=> $num]);
+           return Api::result(null, "ok.");
+   }
+
+
+
+
 }
