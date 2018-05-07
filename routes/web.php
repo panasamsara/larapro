@@ -19,4 +19,3 @@ Route::get('/', function () {
 // Route::get('/index', 'ArticleController@index');
 
 Route::resource('article', 'ArticleController');
-Route::get('article/addNum/{id}','ArticleController@addNum');                        //点击增加阅读量
