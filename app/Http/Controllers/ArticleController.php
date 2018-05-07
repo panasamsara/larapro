@@ -101,7 +101,8 @@ class ArticleController extends Controller
                     ]);
            ]);
 
-         $num = $request->num + 1;
+         $num = Article::findOrFail($id);
+         $num = $num['num'] +1;
          $ar = Article::where('id',$id)->update(['num'=> $num]);
            return Api::result(null, "ok.");
    }
