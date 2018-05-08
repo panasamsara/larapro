@@ -14,8 +14,8 @@ class AddNumTagToArticleTable extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-             $table->float('num');
-             $table->string('tag',15);
+             $table->float('num')->default(0);
+             $table->string('tag',15)->nullable();
         });
     }
 
