@@ -94057,7 +94057,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             aboutMsg: '我是about组件'
         };
-    }
+    },
+
+    methods: {}
 });
 
 /***/ }),
@@ -94583,7 +94585,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { attrs: { id: "app" } },
     [
       _c("header", {}, [
         _c(

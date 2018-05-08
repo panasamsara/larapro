@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <h1>about</h1>
         <p>{{aboutMsg}}</p>
     </div>
@@ -10,6 +10,9 @@
             return {
                 aboutMsg: '我是about组件'
             }
+        },
+        methods: {
+
         }
     }
 </script>

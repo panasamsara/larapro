@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <header class=''>
       <div class='nav-box'>
           <router-link class='nav-box' to="/home">首页</router-link>
@@ -46,6 +46,6 @@ a{
   text-decoration:none;
 } */
 .router-link-active{
-  border-bottom: 2px solid #fff; 
+  border-bottom: 2px solid #fff;
 }
 </style>
