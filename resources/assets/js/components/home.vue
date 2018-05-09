@@ -9,9 +9,13 @@
         
         <div v-for="article in articles.data">
             <router-link :to="{ name: 'article', params: { id: article.id }}">
-                <h5>{{article.title}}</h5>
+                <h5 class='article-title'>{{article.title}}</h5>
             </router-link>
-
+            <div class='edit-btn'>
+                <router-link :to="{ name: 'articleEdit', params: { id: article.id }}">
+                    编辑
+                </router-link>
+            </div>
             <div>{{article.content}}</div>
         </div>
         
@@ -62,5 +66,12 @@
 }
 .content-top{
     margin: 10px;
+}
+.article-title{
+    display: inline-block;
+    margin-right: 20px;
+}
+.edit-btn{
+    display: inline-block;
 }
 </style>
