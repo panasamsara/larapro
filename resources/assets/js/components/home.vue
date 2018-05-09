@@ -2,9 +2,9 @@
     <div>
         <div class="content-top">
             <!-- <div>home页面</div> -->
-            <router-link :to="{ name: 'create'}" class="create-art">
-                <h5>发布文章</h5>
-            </router-link>
+            <!-- <router-link :to="{ name: 'create'}" class="create-art"> -->
+                <!-- <h5>发布文章</h5> -->
+            <!-- </router-link> -->
         </div>
         
         <div v-for="article in articles.data">
