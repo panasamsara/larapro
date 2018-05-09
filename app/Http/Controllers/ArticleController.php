@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Api;
@@ -91,5 +92,10 @@ class ArticleController extends Controller
       return Api::result(null, '删除任务成功.');
     }
 
+    public function getUser()
+    {
+        $user = Auth::user();
+        return $user;
+    }
 
 }

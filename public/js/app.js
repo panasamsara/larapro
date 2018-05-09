@@ -93916,11 +93916,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            articles: ""
+            articles: {},
+            user: {}
         };
     },
     mounted: function mounted() {
-        this.getAll();
+        this.getAll(), this.getUser();
     },
 
     methods: {
@@ -93932,6 +93933,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 url: 'article'
             }).then(function (response) {
                 _this.articles = response.data;
+            });
+        },
+        getUser: function getUser() {
+            var _this2 = this;
+
+            this.$ajax({
+                method: 'get',
+                url: 'user'
+            }).then(function (response) {
+                _this2.user = response.data;
             });
         }
     }
@@ -94341,27 +94352,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       form: {
         title: '',
         content: '',
-        user_id: 1
+        user_id: ''
+      },
+      user: {
+        created_at: '',
+        email: "",
+        id: '',
+        name: "",
+        updated_at: ""
       }
     };
+  },
+  mounted: function mounted() {
+    this.getUser();
   },
 
   methods: {
     onSubmit: function onSubmit() {
       var _this = this;
 
-      console.log(this.form);
       this.$ajax({
         method: 'post',
         url: 'article',
         data: {
           title: this.form.title,
           content: this.form.content,
-          user_id: this.form.user_id
+          user_id: this.user.id
         }
       }).then(function (response) {
         console.log("发布成功");
         _this.$router.push({ path: '/' });
+      });
+    },
+    getUser: function getUser() {
+      var _this2 = this;
+
+      this.$ajax({
+        method: 'get',
+        url: 'user'
+      }).then(function (response) {
+        _this2.user = response.data;
+        console.log(_this2.user);
       });
     }
   }

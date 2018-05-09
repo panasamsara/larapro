@@ -27,25 +27,43 @@
             form: {
               title: '',
               content: '',
-              user_id: 1
+              user_id: ''
+            },
+            user: {
+              created_at: '',
+              email:"",
+              id: '',
+              name: "",
+              updated_at:""
             }
           }
         },
+        mounted() {
+            this.getUser()
+        },
         methods: {
           onSubmit() {
-            console.log(this.form);
             this.$ajax({
                 method: 'post',
                 url: 'article',
                 data:{
                   title: this.form.title,
                   content: this.form.content,
-                  user_id: this.form.user_id
+                  user_id: this.user.id
                 }
             }).then((response) => {
                 console.log("发布成功")
                 this.$router.push({path:'/'});
             })
+          },
+          getUser (){
+              this.$ajax({
+                  method: 'get',
+                  url: 'user',
+              }).then((response) => {
+                  this.user = response.data
+                  console.log(this.user)
+              })
           }
         }
     }

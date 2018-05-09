@@ -22,11 +22,13 @@
     export default {
         data () {
             return {
-                articles: ""
+                articles: {},
+                user: {}
             }
         },
         mounted() {
-            this.getAll()
+            this.getAll(),
+            this.getUser()
         },
         methods: {
             getAll () {
@@ -35,7 +37,14 @@
                     url: 'article',
                 }).then((response) => {
                     this.articles = response.data;
-
+                })
+            },
+            getUser (){
+                this.$ajax({
+                    method: 'get',
+                    url: 'user',
+                }).then((response) => {
+                    this.user = response.data
                 })
             }
         }
