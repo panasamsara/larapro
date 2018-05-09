@@ -23,14 +23,13 @@ Route::get('/user', 'ArticleController@getUser');
 
 //文章
 // Route::resource('article', 'ArticleController');
-// Route::middleware(['web'])->group(function(){
-
+Route::middleware(['auth'])->group(function(){
+   Route::post('article', 'ArticleController@store');
+   Route::put('article/{id}', 'ArticleController@update');
+   Route::delete('article{id}', 'ArticleController@delete');
+});
   Route::get('article', 'ArticleController@index');
   Route::get('article/{id}', 'ArticleController@show');
-  Route::post('article', 'ArticleController@store');
-  Route::put('article/{id}', 'ArticleController@update');
-  Route::delete('article{id}', 'ArticleController@delete');
-
 
 // Auth::routes();//简写不用，等同于下面多条路由
 // Route::get('/home', 'HomeController@index')->name('home');//首页不用
