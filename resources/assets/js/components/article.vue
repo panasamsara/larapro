@@ -19,7 +19,6 @@ import axios from 'axios'
                 }
             }
         },
-        props: ['id'],
         mounted() {
             this.getArticle()
         },
