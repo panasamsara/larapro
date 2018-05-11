@@ -6,6 +6,7 @@
        <div>{{article.data.content}}</div>
        <button type="button" class="btn btn-default" name="button" @click='$router.history.go(-1)'>返回</button>
        <button type="button" class="btn btn-danger" name="button" @click='deleteArticle(article.data.id)'>删除</button>
+       <button type="button" class="btn btn-danger" name="button" @click='lay()'>测试layer</button>
     </div>
 </template>
 
@@ -55,6 +56,9 @@ import axios from 'axios'
                   console.log('删除成功');
                   this.$router.push({path:'/'});
               })
+            },
+            lay(){
+                this.$layer.alert('sdhsdfghdfgh');
             }
         }
     }
