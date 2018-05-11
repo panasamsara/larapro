@@ -5,7 +5,12 @@
        <h5>{{article.data.title}}</h5>
        <div>{{article.data.content}}</div>
        <button type="button" class="btn btn-default" name="button" @click='$router.history.go(-1)'>返回</button>
-       <button type="button" class="btn btn-danger" name="button" @click='deleteArticle(article.data.id)'>删除</button>
+       
+        <router-link :to="'edit/'+article.data.id">
+            <button type="button" class="btn btn-default" name="button"> 编辑</button>
+        </router-link>
+       
+       <button v-if='showDeleteBtn' type="button" class="btn btn-danger" name="button" @click='deleteArticle(article.data.id)'>删除</button>
        <button type="button" class="btn btn-danger" name="button" @click='lay()'>测试layer</button>
     </div>
 </template>
@@ -17,11 +22,15 @@ import axios from 'axios'
             return {
                 article: {
                     data: {}
-                }
+                },
+                user: {},
+                showDeleteBtn: false
             }
         },
-        mounted() {
+        created() {
             this.getArticle()
+            this.getUser()
+            console.log(this.user)
         },
         methods: {
             getArticle () {
@@ -37,12 +46,15 @@ import axios from 'axios'
                     this.article = response.data;
                 })
             },
+            getUser (){
+                this.$ajax({
+                    method: 'get',
+                    url: 'user',
+                }).then((response) => {
+                    this.user = response.data
+                })
+            },
             deleteArticle (id){
-              // axios.delete('article/', {
-              //   id:id
-              // }).then(function (response) {
-              //   console.log(response);
-              // })
               this.$ajax({
                   method: 'delete',
                   // type: 'delete',
@@ -63,3 +75,6 @@ import axios from 'axios'
         }
     }
 </script>
+<style>
+
+</style>

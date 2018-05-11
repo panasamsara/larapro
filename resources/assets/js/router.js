@@ -15,18 +15,18 @@ const routes = [
     {
         path:"/home",
         component: home,
-        // children: [
-        //     {
-        //         path: '/article/:id',
-        //         name: 'article',
-        //         component: article
-        //     }
-        // ]
     },
     {
         path:"/article/:id",
         name: 'article',
-        component: article
+        component: article,
+        // children: [
+        //     {
+        //         path: '/article/edit/:id',
+        //         name: 'articleEdit',
+        //         component: articleEdit
+        //     }
+        // ]
     },
     {
         path:"/article/edit/:id",
