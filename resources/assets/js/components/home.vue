@@ -10,6 +10,11 @@
                     </router-link>
                     
                     <div class='article-content'>{{article.content}}</div>
+                    <div class='article-bottom'>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span>{{article.num}}</span>
+                    </div>
+                    
                 </div>
                 
             </div>
@@ -130,5 +135,7 @@
     -webkit-line-clamp: 3; /** 显示的行数 **/
     overflow: hidden;
 }
-
+.article-bottom{
+    margin-top: 10px;
+}
 </style>
