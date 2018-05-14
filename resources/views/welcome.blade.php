@@ -6,13 +6,13 @@
     }
 
     .content{
-      width: 1000px;
+      width: 1140px;
       height: 100%;
       margin: auto;
       position: absolute;
       top: 0;
       left: 50%;
-      margin-left: -500px;
+      margin-left: -570px;
     }
 
 </style>

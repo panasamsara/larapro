@@ -1,35 +1,48 @@
 <template>
     <div>
-        <div class="content-top">
-            <!-- <div>home页面</div> -->
-            <!-- <router-link :to="{ name: 'create'}" class="create-art"> -->
-                <!-- <h5>发布文章</h5> -->
-            <!-- </router-link> -->
-        </div>
-        
-        <div v-for="article in articles.data" class='article-box'>
-            
-            <img src='../../image/default.png' class='article-cover'>
-            <div class='content-box'>
-                <router-link :to="{ name: 'article', params: { id: article.id }}">
-                    <span class='article-title'>{{article.title}}</span>
-                </router-link>
+        <div class='content-left'>
+            <div v-for="article in articles.data" class='article-box'>
                 
-                <div class='article-content'>{{article.content}}</div>
+                <img src='../../image/default.png' class='article-cover'>
+                <div class='content-box'>
+                    <router-link :to="{ name: 'article', params: { id: article.id }}">
+                        <span class='article-title'>{{article.title}}</span>
+                    </router-link>
+                    
+                    <div class='article-content'>{{article.content}}</div>
+                </div>
+                
             </div>
             
         </div>
-        
-    </div>
+        <div class='content-right'>
+            <my-calendar  class='calendar-box'></my-calendar>
+        </div>
+     </div>
 </template>
 
 <script>
+    import myCalendar from './calendar'
+
     export default {
         data () {
             return {
                 articles: {},
-                user: {}
+                user: {},
+                // calendar2:{
+                //     range:false,
+                //     value:[[2017,12,1],[2019,2,16]], //默认日期
+                //     lunar:false, //显示农历
+                //     begin:[2017,2,16], //可选开始日期
+                //     end:[2019,2,16], //可选结束日期
+                //     select(begin,end){
+                //         // console.log(begin.toString(),end.toString());
+                //     }
+                // },
             }
+        },
+        components:{
+            myCalendar
         },
         mounted() {
             this.getAll(),
@@ -56,6 +69,20 @@
     }
 </script>
 <style>
+.content-left{
+    width: 750px;
+    display: inline-block;
+}
+.content-right{
+    display: inline-block;
+    width: 360px;
+    margin-left: 20px;
+    float: right;
+}
+.calendar-box{
+    padding-top: 20px;
+    box-shadow: 0.5px 1px 5px #888;
+}
 .article-box{
     position: relative;
     margin-bottom: 20px;
@@ -82,9 +109,7 @@
     display: inline-block;
     text-align: center;
 }
-.content-top{
-    margin: 10px;
-}
+
 .article-title{
     display: inline-block;
     margin-right: 20px;

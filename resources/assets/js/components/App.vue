@@ -24,6 +24,7 @@ export default {
 header{
   background-color: #dedede;
   border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
 }
 a{
   text-decoration: none !important;
@@ -42,10 +43,8 @@ a{
   line-height: 60px;
   color: #636b6f;
 }
-/* .nav-box a:active, .nav-box a:visited, .nav-box a:hover{
-  text-decoration:none;
-} */
-.router-link-active{
+
+/*.router-link-active{
   border-bottom: 2px solid #fff;
-}
+}*/
 </style>
