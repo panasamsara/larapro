@@ -6,7 +6,7 @@
        <div>{{article.data.content}}</div>
        <button type="button" class="btn btn-default" name="button" @click='$router.history.go(-1)'>返回</button>
        
-        <router-link :to="'edit/'+article.data.id">
+        <router-link :to="'edit/'+article.data.id" v-if='showEditBtn'>
             <button type="button" class="btn btn-default" name="button"> 编辑</button>
         </router-link>
        
@@ -24,34 +24,35 @@ import axios from 'axios'
                     data: {}
                 },
                 user: {},
+                showEditBtn: false,
                 showDeleteBtn: false
             }
         },
-        created() {
+        mounted() {
             this.getArticle()
-            this.getUser()
-            console.log(this.user)
+            
         },
         methods: {
             getArticle () {
                 this.$ajax({
                     method: 'get',
                     url: 'article/'+this.$route.params.id,
-                    data: {
-                        return:{
-
-                        }
-                    }
                 }).then((response) => {
                     this.article = response.data;
-                })
-            },
-            getUser (){
-                this.$ajax({
-                    method: 'get',
-                    url: 'user',
-                }).then((response) => {
-                    this.user = response.data
+
+                    this.$ajax({
+                        method: 'get',
+                        url: 'user',
+                    }).then((response) => {
+                        this.user = response.data
+                        if(this.user.id == this.article.data.user_id){
+                            this.showEditBtn = true;
+                            this.showDeleteBtn = true;
+                        }else{
+                            this.showEditBtn = false;
+                            this.showDeleteBtn = false;
+                        }
+                    })
                 })
             },
             deleteArticle (id){
