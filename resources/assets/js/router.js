@@ -7,7 +7,7 @@ import about from "./components/about";
 import article from "./components/article";
 import articleEdit from "./components/articleEdit";
 import createArticle from "./components/createArticle"
-import upload from "./components/upload"
+
 // 要告诉 vue 使用 vueRouter
 Vue.use(VueRouter);
 
@@ -37,10 +37,6 @@ const routes = [
         path:"/create",
         name: 'create',
         component: createArticle
-    },
-    {
-        path: "/upload",
-        component: upload
     },
     {
         path: "/about",

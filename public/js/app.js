@@ -91097,8 +91097,6 @@ module.exports = function (css) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_articleEdit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_articleEdit__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_createArticle__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_createArticle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_createArticle__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_upload__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_upload__);
 
 
 
@@ -91134,9 +91132,6 @@ var routes = [{
     path: "/create",
     name: 'create',
     component: __WEBPACK_IMPORTED_MODULE_6__components_createArticle___default.a
-}, {
-    path: "/upload",
-    component: __WEBPACK_IMPORTED_MODULE_7__components_upload___default.a
 }, {
     path: "/about",
     component: __WEBPACK_IMPORTED_MODULE_3__components_about___default.a
@@ -95986,19 +95981,21 @@ var render = function() {
           )
         : _vm._e(),
       _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-danger",
-          attrs: { type: "button", name: "button" },
-          on: {
-            click: function($event) {
-              _vm.lay()
-            }
-          }
-        },
-        [_vm._v("测试layer")]
-      )
+      false
+        ? _c(
+            "button",
+            {
+              staticClass: "btn btn-danger",
+              attrs: { type: "button", name: "button" },
+              on: {
+                click: function($event) {
+                  _vm.lay()
+                }
+              }
+            },
+            [_vm._v("测试layer")]
+          )
+        : _vm._e()
     ],
     1
   )
@@ -96018,6 +96015,10 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(238)
+}
 var normalizeComponent = __webpack_require__(6)
 /* script */
 var __vue_script__ = __webpack_require__(217)
@@ -96026,7 +96027,7 @@ var __vue_template__ = __webpack_require__(218)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -96080,6 +96081,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -96099,7 +96112,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 id: '',
                 name: "",
                 updated_at: ""
-            }
+            },
+            image: '',
+            imgData: {
+                accept: 'image/gif, image/jpeg, image/png, image/jpg'
+            },
+            showUploadBtn: false,
+            formData: {}
 
         };
     },
@@ -96143,6 +96162,48 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {
                 _this3.user = response.data;
             });
+        },
+        createImage: function createImage(file) {
+            var image = new Image();
+            var reader = new FileReader();
+            var vm = this;
+
+            reader.onload = function (e) {
+                vm.image = e.target.result;
+            };
+            reader.readAsDataURL(file);
+            this.showUploadBtn = true;
+        },
+        onFileChange: function onFileChange(e) {
+            var reader = new FileReader();
+            var img = event.target.files[0];
+            this.createImage(img);
+
+            var type = img.type; //文件的类型，判断是否是图片  
+            var size = img.size; //文件的大小，判断图片的大小  
+            if (this.imgData.accept.indexOf(type) == -1) {
+                alert('请选择我们支持的图片格式！');
+                return false;
+            }
+            if (size > 3145728) {
+                alert('请选择3M以内的图片！');
+                return false;
+            }
+
+            var form = new FormData();
+            form.append('imageUpload', img, img.name);
+            this.formData = form;
+        },
+        uploadImg: function uploadImg(article_id) {
+            var _this4 = this;
+
+            this.$ajax.post('upload/' + article_id, this.formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then(function (response) {
+                _this4.showUploadBtn = false;
+            }).catch(function (error) {
+                console.log('上传图片出错！');
+            });
         }
     }
 });
@@ -96158,11 +96219,12 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("h1", [_vm._v("article编辑")]),
+      _c("h1", [_vm._v("编辑")]),
       _vm._v(" "),
       _c("h5", [_vm._v(_vm._s(_vm.article.data.title))]),
       _vm._v(" "),
       _c("el-input", {
+        staticClass: "text-box",
         attrs: { type: "textarea" },
         model: {
           value: _vm.article.data.content,
@@ -96196,7 +96258,43 @@ var render = function() {
           }
         },
         [_vm._v("保存")]
-      )
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "upload-box" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("h3", [_vm._v("上传封面图片（尺寸：300 x 180）")]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "file" },
+            on: { change: _vm.onFileChange }
+          })
+        ]),
+        _vm._v(" "),
+        _vm.image
+          ? _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("预览")]),
+              _vm._v(" "),
+              _c("img", { attrs: { src: _vm.image } })
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.showUploadBtn
+          ? _c(
+              "button",
+              {
+                staticClass: "btn btn-default",
+                attrs: { type: "button", name: "button" },
+                on: {
+                  click: function($event) {
+                    _vm.uploadImg(_vm.article.data.id)
+                  }
+                }
+              },
+              [_vm._v(" 上传")]
+            )
+          : _vm._e()
+      ])
     ],
     1
   )
@@ -96432,185 +96530,9 @@ if (false) {
 }
 
 /***/ }),
-/* 222 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(6)
-/* script */
-var __vue_script__ = __webpack_require__(223)
-/* template */
-var __vue_template__ = __webpack_require__(224)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\upload.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2092db98", Component.options)
-  } else {
-    hotAPI.reload("data-v-2092db98", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 223 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            image: '',
-            imgData: {
-                accept: 'image/gif, image/jpeg, image/png, image/jpg'
-            },
-            showUploadBtn: false,
-            formData: {}
-        };
-    },
-
-    methods: {
-        createImage: function createImage(file) {
-            var image = new Image();
-            var reader = new FileReader();
-            var vm = this;
-
-            reader.onload = function (e) {
-                vm.image = e.target.result;
-            };
-            reader.readAsDataURL(file);
-            this.showUploadBtn = true;
-        },
-        onFileChange: function onFileChange(e) {
-            var reader = new FileReader();
-            var img = event.target.files[0];
-            this.createImage(img);
-
-            var type = img.type; //文件的类型，判断是否是图片  
-            var size = img.size; //文件的大小，判断图片的大小  
-            if (this.imgData.accept.indexOf(type) == -1) {
-                alert('请选择我们支持的图片格式！');
-                return false;
-            }
-            if (size > 3145728) {
-                alert('请选择3M以内的图片！');
-                return false;
-            }
-            var uri = '';
-            var form = new FormData();
-            form.append('imageUpload', img, img.name);
-            this.formData = form;
-        },
-        uploadImg: function uploadImg() {
-            var _this = this;
-
-            this.$ajax.post('upload', this.formData, {
-                headers: { 'Content-Type': 'multipart/form-data' }
-            }).then(function (response) {
-                _this.showUploadBtn = false;
-            }).catch(function (error) {
-                console.log('上传图片出错！');
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 224 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("upload")]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("上传图片")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "file" },
-        on: { change: _vm.onFileChange }
-      })
-    ]),
-    _vm._v(" "),
-    _vm.image
-      ? _c("div", { staticClass: "form-group" }, [
-          _c("label", [_vm._v("预览")]),
-          _vm._v(" "),
-          _c("img", { attrs: { src: _vm.image } })
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.showUploadBtn
-      ? _c(
-          "button",
-          {
-            staticClass: "btn btn-default",
-            attrs: { type: "button", name: "button" },
-            on: { click: _vm.uploadImg }
-          },
-          [_vm._v(" 上传")]
-        )
-      : _vm._e()
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2092db98", module.exports)
-  }
-}
-
-/***/ }),
+/* 222 */,
+/* 223 */,
+/* 224 */,
 /* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -96792,6 +96714,52 @@ E.awrap=function(t){return{__await:t}},f(u.prototype),u.prototype[_]=function(){
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(239);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(27)("24f6d5a1", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76963a99\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./articleEdit.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76963a99\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./articleEdit.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(18)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.text-box{\r\n    margin-bottom: 10px;\n}\n.text-box textarea{\r\n    height: 120px;\n}\n.upload-box{\r\n    margin-top: 20px;\n}\r\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

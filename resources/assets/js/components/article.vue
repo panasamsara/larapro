@@ -11,7 +11,7 @@
         </router-link>
        
        <button v-if='showDeleteBtn' type="button" class="btn btn-danger" name="button" @click='deleteArticle(article.data.id)'>删除</button>
-       <button type="button" class="btn btn-danger" name="button" @click='lay()'>测试layer</button>
+       <button v-if='false' type="button" class="btn btn-danger" name="button" @click='lay()'>测试layer</button>
     </div>
 </template>
 
