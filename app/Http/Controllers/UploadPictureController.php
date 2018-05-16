@@ -17,9 +17,16 @@ class UploadPictureController extends Controller
     public function upload(Request $request)
     {
 
-        if ($request->isMethod('post')) {
+        if ($request->hasFile('imageUpload')){
+            var_dump(2323);
+            $files = $request->file('imageUpload');
+            $path = 'storage/uploads';  
+            $files->move($path, '123.jpg');
+            
+        }
 
-            $file = $request->file('picture');
+
+        /*    $file = $request->file('picture');
 
             // 文件是否上传成功
             if ($file->isValid()) {
@@ -36,10 +43,10 @@ class UploadPictureController extends Controller
                 $bool = Storage::disk('uploads')->put($filename, file_get_contents($realPath));
                 var_dump($bool);
 
-            }
+            }*/
 
-        }
 
-        return view('upload');
+
+        // return view('upload');
     }
 }

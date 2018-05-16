@@ -96498,20 +96498,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            image: ''
+            image: '',
+            imgData: {
+                accept: 'image/gif, image/jpeg, image/png, image/jpg'
+            },
+            showUploadBtn: false,
+            formData: {}
         };
     },
 
     methods: {
-        onFileChange: function onFileChange(e) {
-            var files = e.target.files || e.dataTransfer.files;
-            if (!files.length) return;
-            this.createImage(files[0]);
-        },
         createImage: function createImage(file) {
             var image = new Image();
             var reader = new FileReader();
@@ -96521,6 +96522,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 vm.image = e.target.result;
             };
             reader.readAsDataURL(file);
+            this.showUploadBtn = true;
+        },
+        onFileChange: function onFileChange(e) {
+            var reader = new FileReader();
+            var img = event.target.files[0];
+            this.createImage(img);
+
+            var type = img.type; //文件的类型，判断是否是图片  
+            var size = img.size; //文件的大小，判断图片的大小  
+            if (this.imgData.accept.indexOf(type) == -1) {
+                alert('请选择我们支持的图片格式！');
+                return false;
+            }
+            if (size > 3145728) {
+                alert('请选择3M以内的图片！');
+                return false;
+            }
+            var uri = '';
+            var form = new FormData();
+            form.append('imageUpload', img, img.name);
+            this.formData = form;
+        },
+        uploadImg: function uploadImg() {
+            var _this = this;
+
+            this.$ajax.post('upload', this.formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then(function (response) {
+                _this.showUploadBtn = false;
+            }).catch(function (error) {
+                console.log('上传图片出错！');
+            });
         }
     }
 });
@@ -96552,6 +96585,18 @@ var render = function() {
           _vm._v(" "),
           _c("img", { attrs: { src: _vm.image } })
         ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.showUploadBtn
+      ? _c(
+          "button",
+          {
+            staticClass: "btn btn-default",
+            attrs: { type: "button", name: "button" },
+            on: { click: _vm.uploadImg }
+          },
+          [_vm._v(" 上传")]
+        )
       : _vm._e()
   ])
 }
