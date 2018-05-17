@@ -3,7 +3,8 @@
         <div class='content-left'>
             <div v-for="article in articles.data" class='article-box'>
                 
-                <img src='../../image/default.png' class='article-cover'>
+                <img v-if='!article.cover' src='../../image/default.png' class='article-cover'>
+                <img v-if='article.cover' v-bind:src="imgPath+ article.cover" class='article-cover'>
                 <div class='content-box'>
                     <router-link :to="{ name: 'article', params: { id: article.id }}">
                         <span class='article-title'>{{article.title}}</span>
@@ -34,6 +35,7 @@
             return {
                 articles: {},
                 user: {},
+                imgPath: '../../../../storage/uploads/',
                 // calendar2:{
                 //     range:false,
                 //     value:[[2017,12,1],[2019,2,16]], //默认日期

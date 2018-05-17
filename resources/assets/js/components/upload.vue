@@ -16,6 +16,9 @@
     export default {
          data () {
              return {
+                article: {
+                    data: {}
+                },
                 image: "",
                 imgData: {  
                     accept: "image/gif, image/jpeg, image/png, image/jpg"
@@ -24,7 +27,19 @@
                 formData: {}
              }
          },
+          mounted() {
+            this.getArticle()
+            
+         },
          methods: {
+             getArticle () {
+                this.$ajax({
+                    method: 'get',
+                    url: 'article/'+this.$route.params.id,
+                }).then((response) => {
+                    this.article = response.data;
+                })
+            },
              createImage(file) {
                 var image = new Image();
                 var reader = new FileReader();

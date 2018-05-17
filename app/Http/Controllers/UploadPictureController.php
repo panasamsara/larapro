@@ -13,7 +13,7 @@ class UploadPictureController extends Controller
     // public function index(){
     //     return view('upload');
     // }
-    // 文件上传方法
+    // 图片上传方法
     public function upload($article_id, Request $request)
     {
 
@@ -26,10 +26,10 @@ class UploadPictureController extends Controller
             $files->move($path, $file_name );
             
             $article = Article::findOrFail($article_id);
-            if( !isset($article ->cover) ){
+            
                 $article ->cover = $file_name;
                 $article ->update();
-            }
+            
         }
 
     }
