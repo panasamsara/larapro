@@ -12,8 +12,16 @@
                     
                     <div class='article-content'>{{article.content}}</div>
                     <div class='article-bottom'>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span>{{article.num}}</span>
+                        
+                        <div class='bottom-box'>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span>{{article.user.name}}</span>
+                        </div>
+                        <div class='bottom-box'>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>{{article.num}}</span>
+                        </div>
+                       
                     </div>
                     
                 </div>
@@ -62,6 +70,7 @@
                     url: 'article',
                 }).then((response) => {
                     this.articles = response.data;
+                    console.log(this.articles)
                 })
             },
             getUser (){
@@ -140,5 +149,9 @@
 }
 .article-bottom{
     margin-top: 10px;
+}
+.bottom-box{
+    display: inline-block;
+    margin-right: 20px;
 }
 </style>
