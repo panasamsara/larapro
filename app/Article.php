@@ -13,6 +13,11 @@ class Article extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'content', 'user_id'
+        'title', 'content', 'user_id','tag','cover'
     ];
+
+    //关联标签表
+    public function tag(){
+        return $this->belongsTo('App/tag',);
+    }
 }
