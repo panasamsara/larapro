@@ -18,6 +18,6 @@ class Article extends Model
 
     //关联标签表
     public function tag(){
-        return $this->belongsTo('App/tag',);
+        return $this->belongsTo('App/tag');
     }
 }

@@ -130,6 +130,7 @@
     overflow: hidden;
 }
 .article-content{
+    height: 64px;
     word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/
