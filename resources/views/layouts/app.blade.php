@@ -35,9 +35,10 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">博客
+                    <a class="navbar-brand" href="{{ url('/') }}">鹿鸣 
                         <!-- {{ config('app.name', 'Laravel') }} -->
                     </a>
+                    <span style='display: inline-block;top: 16px;position: relative;'>呦呦鹿鸣，食野之苹</span>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
