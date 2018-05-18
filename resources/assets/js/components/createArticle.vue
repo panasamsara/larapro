@@ -2,12 +2,12 @@
     <div>
         <h1>发布文章</h1>
         <el-form ref="form" :model="form" label-width="80px">
-          <el-form-item label="活动名称">
+          <el-form-item label="标题">
             <el-input v-model="form.title"></el-input>
           </el-form-item>
 
 
-          <el-form-item label="活动形式">
+          <el-form-item label="内容">
             <el-input type="textarea" v-model="form.content"></el-input>
           </el-form-item>
 

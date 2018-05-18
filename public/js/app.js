@@ -96738,7 +96738,7 @@ var render = function() {
         [
           _c(
             "el-form-item",
-            { attrs: { label: "活动名称" } },
+            { attrs: { label: "标题" } },
             [
               _c("el-input", {
                 model: {
@@ -96755,7 +96755,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "el-form-item",
-            { attrs: { label: "活动形式" } },
+            { attrs: { label: "内容" } },
             [
               _c("el-input", {
                 attrs: { type: "textarea" },
