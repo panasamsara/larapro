@@ -6,7 +6,7 @@
             登录注册、文章发布、查看、编辑、删除、图片上传……后续再迭代加功能
         </div>
         <div class='indent'>
-            欢迎提需求，至于改不改则不是看需求好不好，而是看我会不会了 (ง •̀_•́)ง
+            欢迎提需求~ (ง •̀_•́)ง
         </div>
         <h4>使用的技术：</h4>
         <div class='indent'>Laravel、Vue、Vue-router、axios、element-ui</div>
