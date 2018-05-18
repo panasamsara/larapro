@@ -31,6 +31,10 @@ Route::middleware(['auth'])->group(function(){
   Route::get('article', 'ArticleController@index');
   Route::get('article/{id}', 'ArticleController@show');
 
+
+  //标签
+  Route::resource('tag','TagController');
+
 // Auth::routes();//简写不用，等同于下面多条路由
 // Route::get('/home', 'HomeController@index')->name('home');//首页不用
 
