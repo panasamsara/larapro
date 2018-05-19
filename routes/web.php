@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
+Route::get('/clean',function () {
+    return view('cleanCache');
+});
 Route::get('/user', 'ArticleController@getUser');
 
 //文章
@@ -55,3 +58,5 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::post('upload/{article_id}','UploadPictureController@upload');
+
+
