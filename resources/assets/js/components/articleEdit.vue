@@ -1,8 +1,9 @@
 <template>
     <div>
         <h1>编辑</h1>
-        
-       <h5>{{article.data.title}}</h5>
+        <label for="male" class='text-label'>标题:</label>
+       <el-input type="textarea" class='text-title' v-model="article.data.title"></el-input>
+       <label for="male" class='text-label-content'>内容:</label>
         <el-input type="textarea" class='text-box' v-model="article.data.content"></el-input>
 
        <el-button  @click='$router.history.go(-1)'>返回</el-button >
@@ -79,6 +80,22 @@ import upload from './upload'
     }
 </script>
 <style>
+.text-label{
+    height: 38px;
+    margin-right: 10px;
+}
+.text-label-content{
+    display: block;
+}
+.text-title{
+    display: inline-block;
+    width: 420px;
+    margin-bottom: 10px;
+}
+.text-title textarea{
+    width: 420px;
+    height: 38px;
+}
 .text-box{
     margin-bottom: 10px;
 }

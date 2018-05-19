@@ -21,6 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    <script  zIndex="-2" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
