@@ -12,21 +12,30 @@
        
        <button v-if='showDeleteBtn' type="button" class="btn btn-danger" name="button" @click='deleteArticle(article.data.id)'>删除</button>
        <button v-if='false' type="button" class="btn btn-danger" name="button" @click='lay()'>测试layer</button>
+
+       <add-comment :articleId='article.data.id'></add-comment>
     </div>
+    
 </template>
 
 <script>
 import axios from 'axios'
+import addComment from './addComment'
     export default {
         data () {
             return {
                 article: {
-                    data: {}
+                    data: {
+                        
+                    }
                 },
                 user: {},
                 showEditBtn: false,
                 showDeleteBtn: false
             }
+        },
+        components: {
+            addComment
         },
         mounted() {
             this.getArticle()
@@ -39,7 +48,7 @@ import axios from 'axios'
                     url: 'article/'+this.$route.params.id,
                 }).then((response) => {
                     this.article = response.data;
-
+ 
                     this.$ajax({
                         method: 'get',
                         url: 'user',

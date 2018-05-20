@@ -76,12 +76,11 @@
                     url: 'article?page=' + page,
                 }).then((response) => {
                     this.articles = response.data.data;
-                    console.log(this.articles)
+             
                     this.total = response.data.data.total
                     this.current = response.data.data.current_page
                     this.display = response.data.data.per_page
-                    console.log(this.total )
-                    console.log(this.display )
+  
                 })
             },
             pagechange (currentPage){

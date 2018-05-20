@@ -37,6 +37,10 @@ Route::middleware(['auth'])->group(function(){
 
   //标签
   Route::resource('tag','TagController');
+  //评论
+  Route::resource('comment','CommentController');
+  Route::get('comments/{article_id}', 'CommentController@getCommentsByArticleId');
+
 
 // Auth::routes();//简写不用，等同于下面多条路由
 // Route::get('/home', 'HomeController@index')->name('home');//首页不用
