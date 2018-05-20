@@ -93949,6 +93949,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -95962,6 +95966,15 @@ var render = function() {
                     }),
                     _vm._v(" "),
                     _c("span", [_vm._v(_vm._s(article.num))])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "bottom-box" }, [
+                    _c("i", {
+                      staticClass: "fa fa-clock",
+                      attrs: { "aria-hidden": "true" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(article.created_at))])
                   ])
                 ])
               ],

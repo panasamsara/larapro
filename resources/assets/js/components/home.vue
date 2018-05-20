@@ -21,6 +21,10 @@
                             <i class="fa fa-eye" aria-hidden="true"></i>
                             <span>{{article.num}}</span>
                         </div>
+                        <div class='bottom-box'>
+                            <i class="fa fa-clock" aria-hidden="true"></i>
+                            <span>{{article.created_at}}</span>
+                        </div>
                        
                     </div>
                     
