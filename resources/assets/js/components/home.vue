@@ -32,11 +32,13 @@
         <div class='content-right'>
             <my-calendar  class='calendar-box'></my-calendar>
         </div>
+        <paginate v-bind:total="total" v-bind:current-page='current' @pagechange="pagechange"></paginate>
      </div>
 </template>
 
 <script>
     import myCalendar from './calendar'
+    import paginate from './paginate'
 
     export default {
         data () {
@@ -44,6 +46,9 @@
                 articles: {},
                 user: {},
                 imgPath: '../../../../storage/uploads/',
+                total: 100,     // 记录总条数
+                display: 5,   // 每页显示条数
+                current: 1,   // 当前的页数
                 // calendar2:{
                 //     range:false,
                 //     value:[[2017,12,1],[2019,2,16]], //默认日期
@@ -57,21 +62,32 @@
             }
         },
         components:{
-            myCalendar
+            myCalendar,
+            paginate
         },
         mounted() {
-            this.getAll(),
+            this.getAll(1),
             this.getUser()
         },
         methods: {
-            getAll () {
+            getAll (page) {
                 this.$ajax({
                     method: 'get',
-                    url: 'article',
+                    url: 'article?page=' + page,
                 }).then((response) => {
-                    this.articles = response.data;
+                    this.articles = response.data.data;
                     console.log(this.articles)
+                    this.total = response.data.data.total
+                    this.current = response.data.data.current_page
+                    this.display = response.data.data.per_page
+                    console.log(this.total )
+                    console.log(this.display )
                 })
+            },
+            pagechange (currentPage){
+                console.log(currentPage);
+                // ajax请求, 向后台发送 currentPage, 来获取对应的数据
+                this.getAll(currentPage)
             },
             getUser (){
                 this.$ajax({

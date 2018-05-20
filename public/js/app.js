@@ -93807,7 +93807,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\home.vue"
+Component.options.__file = "resources/assets/js/components/home.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -93816,9 +93816,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8da41194", Component.options)
+    hotAPI.createRecord("data-v-6ebcac14", Component.options)
   } else {
-    hotAPI.reload("data-v-8da41194", Component.options)
+    hotAPI.reload("data-v-6ebcac14", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -93839,13 +93839,13 @@ var content = __webpack_require__(197);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("1e79b576", content, false, {});
+var update = __webpack_require__(10)("7d516e00", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8da41194\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8da41194\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6ebcac14\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6ebcac14\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./home.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -93863,7 +93863,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n.content-left{\r\n    width: 750px;\r\n    display: inline-block;\n}\n.content-right{\r\n    display: inline-block;\r\n    width: 360px;\r\n    margin-left: 20px;\r\n    float: right;\n}\n.calendar-box{\r\n    padding-top: 20px;\r\n    -webkit-box-shadow: 0.5px 1px 5px #888;\r\n            box-shadow: 0.5px 1px 5px #888;\n}\n.article-box{\r\n    position: relative;\r\n    margin-bottom: 20px;\r\n    -webkit-box-shadow: 0.5px 1px 5px #888;\r\n            box-shadow: 0.5px 1px 5px #888;\n}\n.article-cover{\r\n    width: 300px;\r\n    height: 180px;\n}\n.content-box{\r\n    display: inline-block;\r\n    position: absolute;\r\n    height: 180px;\r\n    top: 0;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\n}\n.create-art{\r\n    width: 80px;\r\n    height: 36px;\r\n    border-radius: 3px;\r\n    background-color: #636b6f;\r\n    color: #fff !important;\r\n    display: inline-block;\r\n    text-align: center;\n}\n.article-title{\r\n    display: inline-block;\r\n    margin-right: 20px;\r\n    margin-bottom: 15px;\r\n    font-size: 36px;\r\n     word-break: break-all;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/\r\n    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/\r\n    -webkit-line-clamp: 1; /** 显示的行数 **/\r\n    overflow: hidden;\n}\n.article-content{\r\n    height: 64px;\r\n    word-break: break-all;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/\r\n    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/\r\n    -webkit-line-clamp: 3; /** 显示的行数 **/\r\n    overflow: hidden;\n}\n.article-bottom{\r\n    margin-top: 10px;\n}\n.bottom-box{\r\n    display: inline-block;\r\n    margin-right: 20px;\n}\r\n", ""]);
+exports.push([module.i, "\n.content-left{\n    width: 750px;\n    display: inline-block;\n}\n.content-right{\n    display: inline-block;\n    width: 360px;\n    margin-left: 20px;\n    float: right;\n}\n.calendar-box{\n    padding-top: 20px;\n    -webkit-box-shadow: 0.5px 1px 5px #888;\n            box-shadow: 0.5px 1px 5px #888;\n}\n.article-box{\n    position: relative;\n    margin-bottom: 20px;\n    -webkit-box-shadow: 0.5px 1px 5px #888;\n            box-shadow: 0.5px 1px 5px #888;\n}\n.article-cover{\n    width: 300px;\n    height: 180px;\n}\n.content-box{\n    display: inline-block;\n    position: absolute;\n    height: 180px;\n    top: 0;\n    padding-left: 30px;\n    padding-right: 30px;\n}\n.create-art{\n    width: 80px;\n    height: 36px;\n    border-radius: 3px;\n    background-color: #636b6f;\n    color: #fff !important;\n    display: inline-block;\n    text-align: center;\n}\n.article-title{\n    display: inline-block;\n    margin-right: 20px;\n    margin-bottom: 15px;\n    font-size: 36px;\n     word-break: break-all;\n    text-overflow: ellipsis;\n    display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/\n    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/\n    -webkit-line-clamp: 1; /** 显示的行数 **/\n    overflow: hidden;\n}\n.article-content{\n    height: 64px;\n    word-break: break-all;\n    text-overflow: ellipsis;\n    display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/\n    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/\n    -webkit-line-clamp: 3; /** 显示的行数 **/\n    overflow: hidden;\n}\n.article-bottom{\n    margin-top: 10px;\n}\n.bottom-box{\n    display: inline-block;\n    margin-right: 20px;\n}\n", ""]);
 
 // exports
 
@@ -93909,6 +93909,8 @@ module.exports = function listToStyles (parentId, list) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__calendar__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__calendar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paginate__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paginate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__paginate__);
 //
 //
 //
@@ -93946,6 +93948,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+
 
 
 
@@ -93954,7 +93958,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             articles: {},
             user: {},
-            imgPath: '../../../../storage/uploads/'
+            imgPath: '../../../../storage/uploads/',
+            total: 100, // 记录总条数
+            display: 5, // 每页显示条数
+            current: 1 // 当前的页数
             // calendar2:{
             //     range:false,
             //     value:[[2017,12,1],[2019,2,16]], //默认日期
@@ -93969,23 +93976,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     components: {
-        myCalendar: __WEBPACK_IMPORTED_MODULE_0__calendar___default.a
+        myCalendar: __WEBPACK_IMPORTED_MODULE_0__calendar___default.a,
+        paginate: __WEBPACK_IMPORTED_MODULE_1__paginate___default.a
     },
     mounted: function mounted() {
-        this.getAll(), this.getUser();
+        this.getAll(1), this.getUser();
     },
 
     methods: {
-        getAll: function getAll() {
+        getAll: function getAll(page) {
             var _this = this;
 
             this.$ajax({
                 method: 'get',
-                url: 'article'
+                url: 'article?page=' + page
             }).then(function (response) {
-                _this.articles = response.data;
+                _this.articles = response.data.data;
                 console.log(_this.articles);
+                _this.total = response.data.data.total;
+                _this.current = response.data.data.current_page;
+                _this.display = response.data.data.per_page;
+                console.log(_this.total);
+                console.log(_this.display);
             });
+        },
+        pagechange: function pagechange(currentPage) {
+            console.log(currentPage);
+            // ajax请求, 向后台发送 currentPage, 来获取对应的数据
+            this.getAll(currentPage);
         },
         getUser: function getUser() {
             var _this2 = this;
@@ -94019,7 +94037,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-545002d6"
+var __vue_scopeId__ = "data-v-6a975d56"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -94030,7 +94048,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\calendar.vue"
+Component.options.__file = "resources/assets/js/components/calendar.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -94039,9 +94057,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-545002d6", Component.options)
+    hotAPI.createRecord("data-v-6a975d56", Component.options)
   } else {
-    hotAPI.reload("data-v-545002d6", Component.options)
+    hotAPI.reload("data-v-6a975d56", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -94062,13 +94080,13 @@ var content = __webpack_require__(202);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("5ccf8a1a", content, false, {});
+var update = __webpack_require__(10)("65078f22", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-545002d6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./calendar.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-545002d6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./calendar.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a975d56\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./calendar.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a975d56\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./calendar.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -94086,7 +94104,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n.calendar[data-v-545002d6] {\n    margin:auto;\n    width: 100%;\n    min-width:300px;\n    background: #fff;\n    font-family: \"PingFang SC\",\"Hiragino Sans GB\",\"STHeiti\",\"Microsoft YaHei\",\"WenQuanYi Micro Hei\",sans-serif;\n    -webkit-user-select:none;\n       -moz-user-select:none;\n        -ms-user-select:none;\n            user-select:none;\n}\n.calendar-tools[data-v-545002d6]{\n    height:40px;\n    font-size: 20px;\n    line-height: 40px;\n    color:#5e7a88;\n}\n.calendar-tools span[data-v-545002d6]{\n    cursor: pointer;\n}\n.calendar-prev[data-v-545002d6]{\n    width: 14.28571429%;\n    float:left;\n    text-align: center;\n}\n.calendar-info[data-v-545002d6]{\n    padding-top: 3px;\n    font-size:16px;\n    line-height: 1.3;\n    text-align: center;\n}\n.calendar-info>div.month[data-v-545002d6]{\n    margin:auto;\n    height:20px;\n    width:100px;\n    text-align: center;\n    color:#5e7a88;\n    overflow: hidden;\n    position: relative;\n}\n.calendar-info>div.month .month-inner[data-v-545002d6]{\n    position: absolute;\n    left:0;\n    top:0;\n    height:240px;\n    -webkit-transition:top .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n    transition:top .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n}\n.calendar-info>div.month .month-inner>span[data-v-545002d6]{\n    display: block;\n    font-size: 14px;\n    height:20px;\n    width:100px;\n    overflow: hidden;\n    text-align: center;\n}\n.calendar-info>div.year[data-v-545002d6]{\n   font-size:10px;\n   line-height: 1;\n   color:#999;\n}\n.calendar-next[data-v-545002d6]{\n    width: 14.28571429%;\n    float:right;\n    text-align: center;\n}\n.calendar table[data-v-545002d6] {\n    clear: both;\n    width: 100%;\n    margin-bottom:10px;\n    border-collapse: collapse;\n    color: #444444;\n}\n.calendar td[data-v-545002d6] {\n    margin:2px !important;\n    padding:0px 0;\n    width: 14.28571429%;\n    height:44px;\n    text-align: center;\n    vertical-align: middle;\n    font-size:14px;\n    line-height: 125%;\n    cursor: pointer;\n    position: relative;\n    vertical-align: top;\n}\n.calendar td.week[data-v-545002d6]{\n    font-size:10px;\n    pointer-events:none !important;\n    cursor: default !important;\n}\n.calendar td.disabled[data-v-545002d6] {\n    color: #ccc;\n    pointer-events:none !important;\n    cursor: default !important;\n}\n.calendar td.disabled div[data-v-545002d6]{\n    color: #ccc;\n}\n.calendar td span[data-v-545002d6]{\n    display:block;\n    max-width:40px;\n    height:26px;\n    font-size: 16px;\n    line-height:26px;\n    margin:0px auto;\n    border-radius:20px;\n}\n.calendar td:not(.selected) span[data-v-545002d6]:not(.red):hover{\n    background:#f3f8fa;\n    color:#444;\n}\n.calendar td:not(.selected) span.red[data-v-545002d6]:hover{\n    background:#f9efef;\n}\n.calendar td:not(.disabled) span.red[data-v-545002d6]{\n    color:#ea6151;\n}\n.calendar td.selected span[data-v-545002d6]{\n    background-color: #5e7a88;\n    color: #fff;\n}\n.calendar td .text[data-v-545002d6]{\n    position: absolute;\n    top:28px;\n    left:0;\n    right:0;\n    text-align: center;\n    \n    padding:2px;\n    font-size:8px;\n    line-height: 1.2;\n    color:#444;\n}\n.calendar td .isGregorianFestival[data-v-545002d6],\n.calendar td .isLunarFestival[data-v-545002d6]{\n    color:#ea6151;\n}\n.calendar td.selected span.red[data-v-545002d6]{\n    background-color: #ea6151;\n    color: #fff;\n}\n.calendar td.selected span.red[data-v-545002d6]:hover{\n    background-color: #ea6151;\n    color: #fff;\n}\n.calendar thead td[data-v-545002d6] {\n  text-transform: uppercase;\n  height:30px;\n  vertical-align: middle;\n}\n.calendar-button[data-v-545002d6]{\n    text-align: center;\n}\n.calendar-button span[data-v-545002d6]{\n    cursor: pointer;\n    display: inline-block;\n    min-height: 1em;\n    min-width: 5em;\n    vertical-align: baseline;\n    background:#5e7a88;\n    color:#fff;\n    margin: 0 .25em 0 0;\n    padding: .6em 2em;\n    font-size: 1em;\n    line-height: 1em;\n    text-align: center;\n    border-radius: .3em;\n}\n.calendar-button span.cancel[data-v-545002d6]{\n    background:#efefef;\n    color:#666;\n}\n.calendar-years[data-v-545002d6]{\n    position: absolute;\n    left:0px;\n    top:60px;\n    right:0px;\n    bottom:0px;\n    background:#fff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -ms-flex-wrap:wrap;\n        flex-wrap:wrap;\n    overflow: auto;\n    -webkit-transition:all .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n    transition:all .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n    opacity: 0;\n    pointer-events: none;\n    -webkit-transform: translateY(-10px);\n            transform: translateY(-10px);\n}\n.calendar-years.show[data-v-545002d6]{\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0px);\n            transform: translateY(0px);\n}\n.calendar-years>span[data-v-545002d6]{\n    margin:1px 5px;\n    display: inline-block;\n    width:60px;\n    line-height: 30px;\n    border-radius: 20px;\n    text-align:center;\n    border:1px solid #fbfbfb;\n    color:#999;\n}\n.calendar-years>span.active[data-v-545002d6]{\n    border:1px solid #5e7a88;\n    background-color: #5e7a88;\n    color:#fff;\n}\n", ""]);
+exports.push([module.i, "\n.calendar[data-v-6a975d56] {\n    margin:auto;\n    width: 100%;\n    min-width:300px;\n    background: #fff;\n    font-family: \"PingFang SC\",\"Hiragino Sans GB\",\"STHeiti\",\"Microsoft YaHei\",\"WenQuanYi Micro Hei\",sans-serif;\n    -webkit-user-select:none;\n       -moz-user-select:none;\n        -ms-user-select:none;\n            user-select:none;\n}\n.calendar-tools[data-v-6a975d56]{\n    height:40px;\n    font-size: 20px;\n    line-height: 40px;\n    color:#5e7a88;\n}\n.calendar-tools span[data-v-6a975d56]{\n    cursor: pointer;\n}\n.calendar-prev[data-v-6a975d56]{\n    width: 14.28571429%;\n    float:left;\n    text-align: center;\n}\n.calendar-info[data-v-6a975d56]{\n    padding-top: 3px;\n    font-size:16px;\n    line-height: 1.3;\n    text-align: center;\n}\n.calendar-info>div.month[data-v-6a975d56]{\n    margin:auto;\n    height:20px;\n    width:100px;\n    text-align: center;\n    color:#5e7a88;\n    overflow: hidden;\n    position: relative;\n}\n.calendar-info>div.month .month-inner[data-v-6a975d56]{\n    position: absolute;\n    left:0;\n    top:0;\n    height:240px;\n    -webkit-transition:top .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n    transition:top .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n}\n.calendar-info>div.month .month-inner>span[data-v-6a975d56]{\n    display: block;\n    font-size: 14px;\n    height:20px;\n    width:100px;\n    overflow: hidden;\n    text-align: center;\n}\n.calendar-info>div.year[data-v-6a975d56]{\n   font-size:10px;\n   line-height: 1;\n   color:#999;\n}\n.calendar-next[data-v-6a975d56]{\n    width: 14.28571429%;\n    float:right;\n    text-align: center;\n}\n.calendar table[data-v-6a975d56] {\n    clear: both;\n    width: 100%;\n    margin-bottom:10px;\n    border-collapse: collapse;\n    color: #444444;\n}\n.calendar td[data-v-6a975d56] {\n    margin:2px !important;\n    padding:0px 0;\n    width: 14.28571429%;\n    height:44px;\n    text-align: center;\n    vertical-align: middle;\n    font-size:14px;\n    line-height: 125%;\n    cursor: pointer;\n    position: relative;\n    vertical-align: top;\n}\n.calendar td.week[data-v-6a975d56]{\n    font-size:10px;\n    pointer-events:none !important;\n    cursor: default !important;\n}\n.calendar td.disabled[data-v-6a975d56] {\n    color: #ccc;\n    pointer-events:none !important;\n    cursor: default !important;\n}\n.calendar td.disabled div[data-v-6a975d56]{\n    color: #ccc;\n}\n.calendar td span[data-v-6a975d56]{\n    display:block;\n    max-width:40px;\n    height:26px;\n    font-size: 16px;\n    line-height:26px;\n    margin:0px auto;\n    border-radius:20px;\n}\n.calendar td:not(.selected) span[data-v-6a975d56]:not(.red):hover{\n    background:#f3f8fa;\n    color:#444;\n}\n.calendar td:not(.selected) span.red[data-v-6a975d56]:hover{\n    background:#f9efef;\n}\n.calendar td:not(.disabled) span.red[data-v-6a975d56]{\n    color:#ea6151;\n}\n.calendar td.selected span[data-v-6a975d56]{\n    background-color: #5e7a88;\n    color: #fff;\n}\n.calendar td .text[data-v-6a975d56]{\n    position: absolute;\n    top:28px;\n    left:0;\n    right:0;\n    text-align: center;\n    \n    padding:2px;\n    font-size:8px;\n    line-height: 1.2;\n    color:#444;\n}\n.calendar td .isGregorianFestival[data-v-6a975d56],\n.calendar td .isLunarFestival[data-v-6a975d56]{\n    color:#ea6151;\n}\n.calendar td.selected span.red[data-v-6a975d56]{\n    background-color: #ea6151;\n    color: #fff;\n}\n.calendar td.selected span.red[data-v-6a975d56]:hover{\n    background-color: #ea6151;\n    color: #fff;\n}\n.calendar thead td[data-v-6a975d56] {\n  text-transform: uppercase;\n  height:30px;\n  vertical-align: middle;\n}\n.calendar-button[data-v-6a975d56]{\n    text-align: center;\n}\n.calendar-button span[data-v-6a975d56]{\n    cursor: pointer;\n    display: inline-block;\n    min-height: 1em;\n    min-width: 5em;\n    vertical-align: baseline;\n    background:#5e7a88;\n    color:#fff;\n    margin: 0 .25em 0 0;\n    padding: .6em 2em;\n    font-size: 1em;\n    line-height: 1em;\n    text-align: center;\n    border-radius: .3em;\n}\n.calendar-button span.cancel[data-v-6a975d56]{\n    background:#efefef;\n    color:#666;\n}\n.calendar-years[data-v-6a975d56]{\n    position: absolute;\n    left:0px;\n    top:60px;\n    right:0px;\n    bottom:0px;\n    background:#fff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -ms-flex-wrap:wrap;\n        flex-wrap:wrap;\n    overflow: auto;\n    -webkit-transition:all .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n    transition:all .5s cubic-bezier(0.075, 0.82, 0.165, 1);\n    opacity: 0;\n    pointer-events: none;\n    -webkit-transform: translateY(-10px);\n            transform: translateY(-10px);\n}\n.calendar-years.show[data-v-6a975d56]{\n    opacity: 1;\n    pointer-events: auto;\n    -webkit-transform: translateY(0px);\n            transform: translateY(0px);\n}\n.calendar-years>span[data-v-6a975d56]{\n    margin:1px 5px;\n    display: inline-block;\n    width:60px;\n    line-height: 30px;\n    border-radius: 20px;\n    text-align:center;\n    border:1px solid #fbfbfb;\n    color:#999;\n}\n.calendar-years>span.active[data-v-6a975d56]{\n    border:1px solid #5e7a88;\n    background-color: #5e7a88;\n    color:#fff;\n}\n", ""]);
 
 // exports
 
@@ -95577,7 +95595,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-545002d6", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-6a975d56", module.exports)
   }
 }
 
@@ -95589,79 +95607,90 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "content-left" },
-      _vm._l(_vm.articles.data, function(article) {
-        return _c("div", { staticClass: "article-box" }, [
-          !article.cover
-            ? _c("img", {
-                staticClass: "article-cover",
-                attrs: { src: __webpack_require__(207) }
-              })
-            : _vm._e(),
-          _vm._v(" "),
-          article.cover
-            ? _c("img", {
-                staticClass: "article-cover",
-                attrs: { src: _vm.imgPath + article.cover }
-              })
-            : _vm._e(),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "content-box" },
-            [
-              _c(
-                "router-link",
-                {
-                  attrs: { to: { name: "article", params: { id: article.id } } }
-                },
-                [
-                  _c("span", { staticClass: "article-title" }, [
-                    _vm._v(_vm._s(article.title))
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "article-content" }, [
-                _vm._v(_vm._s(article.content))
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "article-bottom" }, [
-                _c("div", { staticClass: "bottom-box" }, [
-                  _c("i", {
-                    staticClass: "fa fa-user",
-                    attrs: { "aria-hidden": "true" }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v(_vm._s(article.user.name))])
+  return _c(
+    "div",
+    [
+      _c(
+        "div",
+        { staticClass: "content-left" },
+        _vm._l(_vm.articles.data, function(article) {
+          return _c("div", { staticClass: "article-box" }, [
+            !article.cover
+              ? _c("img", {
+                  staticClass: "article-cover",
+                  attrs: { src: __webpack_require__(207) }
+                })
+              : _vm._e(),
+            _vm._v(" "),
+            article.cover
+              ? _c("img", {
+                  staticClass: "article-cover",
+                  attrs: { src: _vm.imgPath + article.cover }
+                })
+              : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "content-box" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: { name: "article", params: { id: article.id } }
+                    }
+                  },
+                  [
+                    _c("span", { staticClass: "article-title" }, [
+                      _vm._v(_vm._s(article.title))
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "article-content" }, [
+                  _vm._v(_vm._s(article.content))
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "bottom-box" }, [
-                  _c("i", {
-                    staticClass: "fa fa-eye",
-                    attrs: { "aria-hidden": "true" }
-                  }),
+                _c("div", { staticClass: "article-bottom" }, [
+                  _c("div", { staticClass: "bottom-box" }, [
+                    _c("i", {
+                      staticClass: "fa fa-user",
+                      attrs: { "aria-hidden": "true" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(article.user.name))])
+                  ]),
                   _vm._v(" "),
-                  _c("span", [_vm._v(_vm._s(article.num))])
+                  _c("div", { staticClass: "bottom-box" }, [
+                    _c("i", {
+                      staticClass: "fa fa-eye",
+                      attrs: { "aria-hidden": "true" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(article.num))])
+                  ])
                 ])
-              ])
-            ],
-            1
-          )
-        ])
+              ],
+              1
+            )
+          ])
+        })
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "content-right" },
+        [_c("my-calendar", { staticClass: "calendar-box" })],
+        1
+      ),
+      _vm._v(" "),
+      _c("paginate", {
+        attrs: { total: _vm.total, "current-page": _vm.current },
+        on: { pagechange: _vm.pagechange }
       })
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "content-right" },
-      [_c("my-calendar", { staticClass: "calendar-box" })],
-      1
-    )
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -95669,7 +95698,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8da41194", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-6ebcac14", module.exports)
   }
 }
 
@@ -95677,7 +95706,7 @@ if (false) {
 /* 207 */
 /***/ (function(module, exports) {
 
-module.exports = "/images/default.png?815b199ba447284547df32b30fefcb96";
+module.exports = "/images/default.png?1b46c5120da316fb702d98fa0bba5816";
 
 /***/ }),
 /* 208 */
@@ -95709,7 +95738,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\about.vue"
+Component.options.__file = "resources/assets/js/components/about.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -95718,9 +95747,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-bdd34f74", Component.options)
+    hotAPI.createRecord("data-v-ffce04f4", Component.options)
   } else {
-    hotAPI.reload("data-v-bdd34f74", Component.options)
+    hotAPI.reload("data-v-ffce04f4", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -95741,13 +95770,13 @@ var content = __webpack_require__(210);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("0013fc12", content, false, {});
+var update = __webpack_require__(10)("0711bb6b", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bdd34f74\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./about.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bdd34f74\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./about.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ffce04f4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./about.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ffce04f4\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./about.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -95765,7 +95794,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n.indent{\r\n    text-indent: 40px;\n}\r\n", ""]);
+exports.push([module.i, "\n.indent{\n    text-indent: 40px;\n}\n", ""]);
 
 // exports
 
@@ -95844,7 +95873,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-bdd34f74", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-ffce04f4", module.exports)
   }
 }
 
@@ -95878,7 +95907,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\article.vue"
+Component.options.__file = "resources/assets/js/components/article.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -95887,9 +95916,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3498fe22", Component.options)
+    hotAPI.createRecord("data-v-0ea1d62f", Component.options)
   } else {
-    hotAPI.reload("data-v-3498fe22", Component.options)
+    hotAPI.reload("data-v-0ea1d62f", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -95910,13 +95939,13 @@ var content = __webpack_require__(215);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("4c37c714", content, false, {});
+var update = __webpack_require__(10)("6bf979fc", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3498fe22\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./article.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3498fe22\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./article.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0ea1d62f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./article.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0ea1d62f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./article.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -96112,7 +96141,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-3498fe22", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-0ea1d62f", module.exports)
   }
 }
 
@@ -96146,7 +96175,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\articleEdit.vue"
+Component.options.__file = "resources/assets/js/components/articleEdit.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -96155,9 +96184,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-76963a99", Component.options)
+    hotAPI.createRecord("data-v-29d7efd9", Component.options)
   } else {
-    hotAPI.reload("data-v-76963a99", Component.options)
+    hotAPI.reload("data-v-29d7efd9", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -96178,13 +96207,13 @@ var content = __webpack_require__(220);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("24f6d5a1", content, false, {});
+var update = __webpack_require__(10)("3567a1b2", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76963a99\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./articleEdit.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76963a99\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./articleEdit.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-29d7efd9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./articleEdit.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-29d7efd9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./articleEdit.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -96202,7 +96231,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n.text-label{\r\n    height: 38px;\r\n    margin-right: 10px;\n}\n.text-label-content{\r\n    display: block;\n}\n.text-title{\r\n    display: inline-block;\r\n    width: 420px;\r\n    margin-bottom: 10px;\n}\n.text-title textarea{\r\n    width: 420px;\r\n    height: 38px;\n}\n.text-box{\r\n    margin-bottom: 10px;\n}\n.text-box textarea{\r\n    height: 120px;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.text-label{\n    height: 38px;\n    margin-right: 10px;\n}\n.text-label-content{\n    display: block;\n}\n.text-title{\n    display: inline-block;\n    width: 420px;\n    margin-bottom: 10px;\n}\n.text-title textarea{\n    width: 420px;\n    height: 38px;\n}\n.text-box{\n    margin-bottom: 10px;\n}\n.text-box textarea{\n    height: 120px;\n}\n\n", ""]);
 
 // exports
 
@@ -96335,7 +96364,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\upload.vue"
+Component.options.__file = "resources/assets/js/components/upload.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -96344,9 +96373,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2092db98", Component.options)
+    hotAPI.createRecord("data-v-21e4de58", Component.options)
   } else {
-    hotAPI.reload("data-v-2092db98", Component.options)
+    hotAPI.reload("data-v-21e4de58", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -96367,13 +96396,13 @@ var content = __webpack_require__(224);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("4cff0b23", content, false, {});
+var update = __webpack_require__(10)("4af943a1", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2092db98\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./upload.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2092db98\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./upload.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-21e4de58\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./upload.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-21e4de58\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./upload.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -96391,7 +96420,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n.upload-box{\r\n    margin-top: 20px;\n}\r\n", ""]);
+exports.push([module.i, "\n.upload-box{\n    margin-top: 20px;\n}\n", ""]);
 
 // exports
 
@@ -96541,7 +96570,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2092db98", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-21e4de58", module.exports)
   }
 }
 
@@ -96628,7 +96657,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-76963a99", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-29d7efd9", module.exports)
   }
 }
 
@@ -96658,7 +96687,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\createArticle.vue"
+Component.options.__file = "resources/assets/js/components/createArticle.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -96667,9 +96696,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-43cdc593", Component.options)
+    hotAPI.createRecord("data-v-2d772ad3", Component.options)
   } else {
-    hotAPI.reload("data-v-43cdc593", Component.options)
+    hotAPI.reload("data-v-2d772ad3", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -96848,7 +96877,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-43cdc593", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-2d772ad3", module.exports)
   }
 }
 
@@ -96882,7 +96911,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\App.vue"
+Component.options.__file = "resources/assets/js/components/App.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -96891,9 +96920,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-117390fa", Component.options)
+    hotAPI.createRecord("data-v-8142f38c", Component.options)
   } else {
-    hotAPI.reload("data-v-117390fa", Component.options)
+    hotAPI.reload("data-v-8142f38c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -96914,13 +96943,13 @@ var content = __webpack_require__(233);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("c302be36", content, false, {});
+var update = __webpack_require__(10)("4d715ee6", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-117390fa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-117390fa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8142f38c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8142f38c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -96938,7 +96967,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\nheader{\r\n  background-color: #dedede;\r\n  border-bottom: 1px solid #fff;\r\n  margin-bottom: 10px;\n}\na{\r\n  text-decoration: none !important;\n}\n.nav-box{\r\n  display: inline-block;\r\n  width: 80px;\r\n  height: 60px;\n}\n.nav-box a{\r\n  font-size: 20px;\r\n  font-weight: 700;\r\n  display: inline-block;\r\n  vertical-align: middle;\r\n  text-align: center;\r\n  line-height: 60px;\r\n  color: #636b6f;\n}\r\n\r\n/*.router-link-active{\r\n  border-bottom: 2px solid #fff;\r\n}*/\r\n", ""]);
+exports.push([module.i, "\nheader{\n  background-color: #dedede;\n  border-bottom: 1px solid #fff;\n  margin-bottom: 10px;\n}\na{\n  text-decoration: none !important;\n}\n.nav-box{\n  display: inline-block;\n  width: 80px;\n  height: 60px;\n}\n.nav-box a{\n  font-size: 20px;\n  font-weight: 700;\n  display: inline-block;\n  vertical-align: middle;\n  text-align: center;\n  line-height: 60px;\n  color: #636b6f;\n}\n\n/*.router-link-active{\n  border-bottom: 2px solid #fff;\n}*/\n", ""]);
 
 // exports
 
@@ -97018,7 +97047,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-117390fa", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
   }
 }
 
@@ -97034,6 +97063,308 @@ E.awrap=function(t){return{__await:t}},f(u.prototype),u.prototype[_]=function(){
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(247)
+}
+var normalizeComponent = __webpack_require__(7)
+/* script */
+var __vue_script__ = __webpack_require__(245)
+/* template */
+var __vue_template__ = __webpack_require__(246)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/paginate.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3b5e6e0e", Component.options)
+  } else {
+    hotAPI.reload("data-v-3b5e6e0e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 245 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      current: this.currentPage
+    };
+  },
+
+  props: {
+    total: { // 数据总条数
+      type: Number,
+      default: 0
+    },
+    display: { // 每页显示条数
+      type: Number,
+      default: 5
+    },
+    currentPage: { // 当前页码
+      type: Number,
+      default: 1
+    },
+    pagegroup: { // 分页条数
+      type: Number,
+      default: 5,
+      coerce: function coerce(v) {
+        v = v > 0 ? v : 5;
+        return v % 2 === 1 ? v : v + 1;
+      }
+    }
+  },
+  computed: {
+    page: function page() {
+      // 总页数
+      return Math.ceil(this.total / this.display);
+    },
+    grouplist: function grouplist() {
+      // 获取分页页码
+      var len = this.page,
+          temp = [],
+          list = [],
+          count = Math.floor(this.pagegroup / 2),
+          center = this.current;
+      if (len <= this.pagegroup) {
+        while (len--) {
+          temp.push({ text: this.page - len, val: this.page - len });
+        }
+        ;
+        return temp;
+      }
+      while (len--) {
+        temp.push(this.page - len);
+      }
+      ;
+      var idx = temp.indexOf(center);
+      idx < count && (center = center + count - idx);
+      this.current > this.page - count && (center = this.page - count);
+      temp = temp.splice(center - count - 1, this.pagegroup);
+      do {
+        var t = temp.shift();
+        list.push({
+          text: t,
+          val: t
+        });
+      } while (temp.length);
+      if (this.page > this.pagegroup) {
+        this.current > count + 1 && list.unshift({ text: '...', val: list[0].val - 1 });
+        this.current < this.page - count && list.push({ text: '...', val: list[list.length - 1].val + 1 });
+      }
+      return list;
+    }
+  },
+  methods: {
+    setCurrent: function setCurrent(idx) {
+      if (this.current != idx && idx > 0 && idx < this.page + 1) {
+        this.current = idx;
+        this.$emit('pagechange', this.current);
+      }
+    }
+  }
+});
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("nav", [
+    _c(
+      "ul",
+      { staticClass: "pagination" },
+      [
+        _c("li", { class: { disabled: _vm.current == 1 } }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:;" },
+              on: {
+                click: function($event) {
+                  _vm.setCurrent(_vm.current - 1)
+                }
+              }
+            },
+            [_vm._v(" « ")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { class: { disabled: _vm.current == 1 } }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:;" },
+              on: {
+                click: function($event) {
+                  _vm.setCurrent(1)
+                }
+              }
+            },
+            [_vm._v(" 首页 ")]
+          )
+        ]),
+        _vm._v(" "),
+        _vm._l(_vm.grouplist, function(p) {
+          return _c("li", { class: { active: _vm.current == p.val } }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "javascript:;" },
+                on: {
+                  click: function($event) {
+                    _vm.setCurrent(p.val)
+                  }
+                }
+              },
+              [_vm._v(" " + _vm._s(p.text) + " ")]
+            )
+          ])
+        }),
+        _vm._v(" "),
+        _c("li", { class: { disabled: _vm.current == _vm.page } }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:;" },
+              on: {
+                click: function($event) {
+                  _vm.setCurrent(_vm.page)
+                }
+              }
+            },
+            [_vm._v(" 尾页 ")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { class: { disabled: _vm.current == _vm.page } }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:;" },
+              on: {
+                click: function($event) {
+                  _vm.setCurrent(_vm.current + 1)
+                }
+              }
+            },
+            [_vm._v(" »")]
+          )
+        ])
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3b5e6e0e", module.exports)
+  }
+}
+
+/***/ }),
+/* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(248);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(10)("61e14dfe", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3b5e6e0e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paginate.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3b5e6e0e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paginate.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(6)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);
