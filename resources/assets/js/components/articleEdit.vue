@@ -9,14 +9,30 @@
        <el-button  @click='$router.history.go(-1)'>返回</el-button >
        <el-button type="primary" @click='update(article.data.id)'>保存</el-button>
        
-        <upload></upload>
+        <div class='m-t-20'>
+            <el-button type="primary" @click='toggleShow'>上传封面图</el-button>
+            <my-upload field="img"
+                @crop-success="cropSuccess"
+                @crop-upload-success="cropUploadSuccess"
+                @crop-upload-fail="cropUploadFail"
+                v-model="show"
+                :width="300"
+                :height="180"
+                noCircle
+                :url="'api/upload/'+article.data.id"
+                :params="params"
+                :headers="headers"
+                img-format="png"></my-upload>
+            <img :src="imgDataUrl">
+        </div>
        
     </div>
 </template>
 
 <script>
 import axios from 'axios'
-import upload from './upload'
+// import upload from './upload'
+import myUpload from 'vue-image-crop-upload';//图片裁剪以及上传组件（第三方）
     export default {
         data () {
             return {
@@ -35,11 +51,20 @@ import upload from './upload'
                     name: "",
                     updated_at:""
                 },
-
+                show: false,
+                params: {
+                    token: '123456798',
+                    name: 'avatar'
+                },
+                headers: {
+                    smail: '*_~'
+                },
+                imgDataUrl: '' // the datebase64 url of created image   
             }
         },
         components: {
-            upload
+            // upload
+            'my-upload': myUpload
         },
         mounted() {
             this.getArticle()
@@ -75,7 +100,41 @@ import upload from './upload'
                   this.user = response.data
               })
             },
-            
+            toggleShow() {
+				this.show = !this.show;
+			},
+            /**
+			 * crop success
+			 *
+			 * [param] imgDataUrl
+			 * [param] field
+			 */
+			cropSuccess(imgDataUrl, field){
+				console.log('-------- crop success --------');
+				this.imgDataUrl = imgDataUrl;
+			},
+			/**
+			 * upload success
+			 *
+			 * [param] jsonData  server api return data, already json encode
+			 * [param] field
+			 */
+			cropUploadSuccess(jsonData, field){
+				console.log('-------- upload success --------');
+				console.log(jsonData);
+				console.log('field: ' + field);
+			},
+			/**
+			 * upload fail
+			 *
+			 * [param] status    server api return error status, like 500
+			 * [param] field
+			 */
+			cropUploadFail(status, field){
+				console.log('-------- upload fail --------');
+				console.log(status);
+				console.log('field: ' + field);
+			}
         }
     }
 </script>
@@ -102,5 +161,7 @@ import upload from './upload'
 .text-box textarea{
     height: 120px;
 }
-
+.m-t-20{
+    margin-top: 20px;
+}
 </style>

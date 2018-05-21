@@ -33,4 +33,19 @@ class UploadPictureController extends Controller
         }
 
     }
+
+    public function uploadCrop($article_id, Request $request){
+        $file = $request->file('img');  
+        $ext = $file -> getClientOriginalExtension(); 
+        $file_name = $article_id.'.'.$ext;
+        $path = 'storage/uploads';  
+        $file->move($path, $file_name );
+
+        $article = Article::findOrFail($article_id);
+            
+        $article ->cover = $file_name;
+        $article ->update();
+
+        return response()->json(['success'=>'done']);
+    }
 }
