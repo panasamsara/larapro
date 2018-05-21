@@ -16,7 +16,9 @@ class ArticleController extends Controller
 
 
     public function index(){
-        $articles = Article::with('user')->paginate(5);
+        $articles = Article::with('user')
+                ->with('comments')
+                ->paginate(5);
         return Api::result($articles);
     }
 

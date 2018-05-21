@@ -25,7 +25,10 @@
                             <i class="fa fa-clock" aria-hidden="true"></i>
                             <span>{{article.created_at}}</span>
                         </div>
-                       
+                       <div class='bottom-box'>
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                            <span>{{article.comments.length}}</span>
+                        </div>
                     </div>
                     
                 </div>

@@ -25,4 +25,8 @@ class Article extends Model
     public function tag(){
         return $this->belongsTo('App\tag');
     }
+
+    public function comments(){
+        return $this->hasMany('App\Comment','article_id','id');
+    }
 }
