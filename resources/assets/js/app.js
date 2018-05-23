@@ -74,5 +74,13 @@ const app = new Vue({
     router,
     components: {
         App
+    },
+    mounted() {
+        this.removeLoad()
+    },
+    methods: {
+        removeLoad(){
+            $('#beforeReady').css('display','none')
+        }
     }
 });

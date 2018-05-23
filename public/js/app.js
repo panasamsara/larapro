@@ -58881,6 +58881,15 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     router: __WEBPACK_IMPORTED_MODULE_4__router_js__["a" /* default */],
     components: {
         App: __WEBPACK_IMPORTED_MODULE_5__components_App___default.a
+    },
+    mounted: function mounted() {
+        this.removeLoad();
+    },
+
+    methods: {
+        removeLoad: function removeLoad() {
+            __WEBPACK_IMPORTED_MODULE_6_jquery___default()('#beforeReady').css('display', 'none');
+        }
     }
 });
 

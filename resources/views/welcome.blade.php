@@ -14,6 +14,16 @@
       left: 50%;
       margin-left: -570px;
     }
+    #beforeReady{
+        width: 400px;
+        height: 300px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        background: url('../../images/loading.gif');
+        text-align: center;
+    }
 
 </style>
 
@@ -23,10 +33,12 @@
   <div id="container">
       <div ></div>
       <div class="content" >
-
-          <div id='app'>
-              <app></app>
-          </div>
+            <div id='beforeReady'>
+                loading……
+            </div>
+            <div id='app'>
+                <app></app>
+            </div>
 
       </div>
   </div>
