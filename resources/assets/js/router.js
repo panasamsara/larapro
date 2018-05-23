@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 // 引入组件
 // import home from "./components/home";
@@ -52,4 +54,12 @@ const routes = [
 var router =  new VueRouter({
     routes
 })
+router.beforeEach((to, from, next) => {
+    NProgress.start();
+    next();
+})
+router.afterEach((to, from) => {
+    NProgress.done();
+})
+
 export default router;

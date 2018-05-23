@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "element-ui": "^2.3.6",
+        "nprogress": "^0.2.0",
         "vue-image-crop-upload": "^2.3.0",
         "vue-layer": "^0.9.8"
     }
