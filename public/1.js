@@ -8,7 +8,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(233)
 }
-var normalizeComponent = __webpack_require__(77)
+var normalizeComponent = __webpack_require__(78)
 /* script */
 var __vue_script__ = __webpack_require__(235)
 /* template */
@@ -62,7 +62,7 @@ var content = __webpack_require__(234);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(78)("24f6d5a1", content, false, {});
+var update = __webpack_require__(79)("24f6d5a1", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -264,7 +264,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(237)
 }
-var normalizeComponent = __webpack_require__(77)
+var normalizeComponent = __webpack_require__(78)
 /* script */
 var __vue_script__ = __webpack_require__(239)
 /* template */
@@ -318,7 +318,7 @@ var content = __webpack_require__(238);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(78)("d826f0ae", content, false, {});
+var update = __webpack_require__(79)("d826f0ae", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags

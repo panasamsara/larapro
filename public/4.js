@@ -4,7 +4,7 @@ webpackJsonp([4],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(77)
+var normalizeComponent = __webpack_require__(78)
 /* script */
 var __vue_script__ = __webpack_require__(246)
 /* template */

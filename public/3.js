@@ -8,7 +8,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(248)
 }
-var normalizeComponent = __webpack_require__(77)
+var normalizeComponent = __webpack_require__(78)
 /* script */
 var __vue_script__ = __webpack_require__(250)
 /* template */
@@ -62,7 +62,7 @@ var content = __webpack_require__(249);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(78)("0013fc12", content, false, {});
+var update = __webpack_require__(79)("0013fc12", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
