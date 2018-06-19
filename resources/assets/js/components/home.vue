@@ -1,6 +1,20 @@
 <template>
     <div>
         <div class='content-left'>
+            <el-row>
+                <el-col :span="12">
+                    <div class='m-lr-15'>
+                        <el-input placeholder="请输入查找内容" v-model="query" class="input-with-select">
+                            <el-button slot="append" icon="el-icon-search" @click='search({query})'></el-button>
+                        </el-input>
+                    </div>
+                </el-col>
+                 <el-col :span="12">
+                    <el-button class='all-btn' type="primary" @click='getAllDatas'>全部</el-button>
+                 </el-col>
+                
+                
+            </el-row>
             <div v-for="article in articles.data" class='article-box'>
                 
                 <img v-if='!article.cover' src='../../image/default.png' class='article-cover'>
@@ -56,6 +70,7 @@
                 total: 100,     // 记录总条数
                 display: 5,   // 每页显示条数
                 current: 1,   // 当前的页数
+                query: ''
                 // calendar2:{
                 //     range:false,
                 //     value:[[2017,12,1],[2019,2,16]], //默认日期
@@ -77,10 +92,10 @@
             this.getUser()
         },
         methods: {
-            getAll (page) {
+            getAll (page, keyword) {
                 this.$ajax({
                     method: 'get',
-                    url: 'article?page=' + page,
+                    url: 'article?page=' + page + '&query=' +keyword,
                 }).then((response) => {
                     this.articles = response.data.data;
              
@@ -89,6 +104,10 @@
                     this.display = response.data.data.per_page
   
                 })
+            },
+            getAllDatas(){
+                this.getAll(1)
+                this.query =''
             },
             pagechange (currentPage){
                 console.log(currentPage);
@@ -102,6 +121,9 @@
                 }).then((response) => {
                     this.user = response.data
                 })
+            },
+            search(keyword){
+                this.getAll(1, keyword.query)
             }
         }
     }
@@ -175,5 +197,11 @@
 .bottom-box{
     display: inline-block;
     margin-right: 20px;
+}
+.all-btn{
+    margin: 15px 0 15px 30px;
+}
+.m-lr-15{
+    margin: 15px 0 ;
 }
 </style>

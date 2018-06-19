@@ -15,10 +15,11 @@ class ArticleController extends Controller
    }
 
 
-    public function index(){
+    public function index(Request $request){
         $articles = Article::with('user')
-                ->with('comments')
-                ->paginate(5);
+                ->with('comments');
+        $articles = Article::searchByQuery($articles, $request)->paginate(5);
+                
         return Api::result($articles);
     }
 

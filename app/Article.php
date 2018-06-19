@@ -29,4 +29,13 @@ class Article extends Model
     public function comments(){
         return $this->hasMany('App\Comment','article_id','id');
     }
+
+    static function searchByQuery($data, $request){
+        if( isset($request['query']) ){
+            if( $request['query'] != 'undefined' ){
+                $data = $data->where('title', 'like', '%'.$request['query'].'%' );
+            }
+        }
+        return $data;
+    }
 }
