@@ -45,28 +45,28 @@ export function tryHideFullScreenLoading() {
     }
 }
 //http request 拦截器
-axios.interceptors.request.use(
-    config => {
-        showFullScreenLoading()
-        return config;
-    },
-    error => {
-        return Promise.reject(err);
-    }
-);
+// axios.interceptors.request.use(
+//     config => {
+//         showFullScreenLoading()
+//         return config;
+//     },
+//     error => {
+//         return Promise.reject(err);
+//     }
+// );
 //http response 拦截器
-axios.interceptors.response.use(
-    response => {
-        tryHideFullScreenLoading()
-        return response;
-    },
-    error => {
-        return Promise.reject(error)
-    }
-);
+// axios.interceptors.response.use(
+//     response => {
+//         tryHideFullScreenLoading()
+//         return response;
+//     },
+//     error => {
+//         return Promise.reject(error)
+//     }
+// );
 /** axios拦截器 结束 */
 
-Vue.use(ElementUI)
+// Vue.use(ElementUI)
 Vue.prototype.$ajax = axios
 
 const app = new Vue({

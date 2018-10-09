@@ -11,5 +11,23 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+// mix.js('resources/assets/js/app.js', 'public/js')
+//    .sass('resources/assets/sass/app.scss', 'public/css');
+
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+mix.webpackConfig({
+  // plugins: [
+  //   new BundleAnalyzerPlugin(),
+  // ],
+  externals: {
+    'element-ui': 'Element',
+    'axios': 'axios',
+    'vue': 'Vue',
+    'vuex': 'Vuex',
+    'vue-router': 'VueRouter',
+    'vue-chartjs': 'VueChartJs',
+    'lodash': '_',
+  }
+}).js('resources/assets/js/app.js', 'public/js')
+ .sass('resources/assets/sass/app.scss', 'public/css')
+ .styles(['node_modules/element-ui/lib/theme-chalk/index.css'], 'public/css/element-ui.css');

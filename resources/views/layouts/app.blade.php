@@ -12,6 +12,15 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+    <script src="//cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+    <script src="//cdn.bootcss.com/vuex/3.0.1/vuex.min.js"></script>
+    <script src="//cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+    <script src="//cdn.bootcss.com/element-ui/2.0.11/index.js"></script>
+    <script src="//cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
+    <script src="//cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="//unpkg.com/vue-chartjs@2.8.7/dist/vue-chartjs.full.min.js"></script>
+    <link href="https://cdn.bootcss.com/element-ui/2.0.11/theme-chalk/index.css" rel="stylesheet">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{{ asset('images/favicon.ico') }}}">
