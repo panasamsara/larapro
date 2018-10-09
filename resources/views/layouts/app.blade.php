@@ -10,7 +10,6 @@
     <!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- <link href="https://cdn.bootcss.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <script src="//cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
     <script src="//cdn.bootcss.com/vuex/3.0.1/vuex.min.js"></script>
